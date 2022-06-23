@@ -25,12 +25,7 @@ SLACK_BOT_TOKEN=
 
 ### 3. Running bot locally
 
-Run make file to start docker container and start the bot.
+Run docker-compose to start the bot
 ```
-make
-```
-
-If image has not been created, run the following to build docker image and start bot.
-```
-make buildup
+docker-compose up -d 
 ```
