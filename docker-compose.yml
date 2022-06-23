@@ -3,9 +3,10 @@ version: "3.9"
 services:
   slackbot:
     container_name: followup
-    image: irregularengineering/kudos:latest
+#    image: python:latest
+    build: .
     environment:
-      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN}
     volumes:
-      - .:/opt/kudos
+      - .:/opt/followup
     command: bash -c "python3 main.py"
