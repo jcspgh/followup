@@ -19,7 +19,7 @@ s = BackgroundScheduler()
 
 
 def parse_arguments(data):
-    return [word.strip('"') for word in re.findall('\".*?\"', data)]
+    return [re.sub('[\"“”]', '', word) for word in re.findall('[”“\"].*?[\"“”]', data)]
 
 
 class CommandProcessor(object):
