@@ -5,7 +5,7 @@ Send followup messages
 ## Usage
 
 ```
-Usage: !followup "Message text" "datetime"
+Usage: /followup "Message text" "datetime"
 ```
 
 ## Setup
