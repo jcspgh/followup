@@ -29,3 +29,13 @@ Run docker-compose to start the bot
 ```
 docker-compose up -d 
 ```
+
+## Running With Glitch
+1. Go back to the app settings and click on Slash Commands.
+2. Click the 'Create New Command' button and fill in the following:
+3. Command: /followup
+4. Request URL: Your server or Glitch URL + /follow
+5. Short description: Sets a followup reminder
+6. Usage hint: /followup "message" "time"
+
+- If you did "Remix" on Glitch, it auto-generate a new URL with two random words, so your Request URL should be like: https://fancy-feast.glitch.me/followup.
