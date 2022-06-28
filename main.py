@@ -10,14 +10,13 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(message)s'
 )
-BOT_ID = None
 
 s = BackgroundScheduler()
 
 app = Flask(__name__)
 
-
 command_parser = CommandProcessor()
+
 client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
 
 
