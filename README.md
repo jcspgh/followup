@@ -39,3 +39,10 @@ docker-compose up -d
 6. Usage hint: /followup "message" "time"
 
 - If you did "Remix" on Glitch, it auto-generate a new URL with two random words, so your Request URL should be like: https://fancy-feast.glitch.me/followup.
+
+The code can be run on Glitch through the command line. Follow the next steps to run the server
+
+1. Set an environment for the Slack token `export SLACK_BOT_TOKEN=<token>`
+   1. It is also possible to set it through the auto-populated .env
+2. Install the requirements `python3 -m pip install -r requirements.txt`
+3. Run through python `python3 main.py`

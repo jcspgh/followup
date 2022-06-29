@@ -47,8 +47,8 @@ def parse_arguments(data):
     return [re.sub('[\"“”]', '', word) for word in re.findall('[”“\"].*?[\"“”]', data)]
 
 
-def process_reminder(message, web_client, channel):
+def process_reminder(message, web_client, user_id):
     web_client.chat_postMessage(
-        channel=channel,
+        channel=user_id,
         text=message,
     )

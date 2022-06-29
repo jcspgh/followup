@@ -29,7 +29,7 @@ def parse_followup_command(**kwargs):
     timestamp = dateparser.parse(date)
 
     if timestamp:
-        s.add_job(process_reminder, "date", run_date=timestamp, args=[message, client, kwargs['channel_id']])
+        s.add_job(process_reminder, "date", run_date=timestamp, args=[message, client, kwargs['user_id']])
 
 
 @app.route('/followup', methods=['POST'])
