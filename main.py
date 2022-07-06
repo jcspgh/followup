@@ -31,12 +31,14 @@ def parse_followup_command(**kwargs):
     if timestamp:
         s.add_job(process_reminder, "date", run_date=timestamp, args=[message, client, kwargs['user_id']])
 
+    return message, date
+
 
 @app.route('/followup', methods=['POST'])
 def followup_command():
     data = request.form
-    parse_followup_command(**data)
-    payload = {'text': 'OK I will remind you!'}
+    message, _ = parse_followup_command(**data)
+    payload = {'text': f'Got "{message}". I will remind you!'}
     return jsonify(payload)
 
 
