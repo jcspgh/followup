@@ -5,7 +5,7 @@ Send followup messages
 ## Usage
 
 ```
-Usage: /followup "Message text" "datetime"
+Usage: /followup
 ```
 
 ## Setup
@@ -13,6 +13,13 @@ Usage: /followup "Message text" "datetime"
 ### 1. Create Slack bot
 Create <a href="https://api.slack.com/apps">slack bot</a> for your slack org, install, and
 go through steps to create an api key.
+
+#### Permissions
+
+The following permissions are required to make the Slack bot operate properly. 
+
+- chat:write
+- users:read
 
 ### 2. Create .env file
 
